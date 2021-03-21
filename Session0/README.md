@@ -7,7 +7,7 @@
 고양이는  
 귀여워요
 ###### 얼마나 작아지나?  
-####### 최대
+
 
 ## 코딩은 ```
 ``` python  
@@ -17,7 +17,7 @@ def hi():
 hi()
 ```
 
-## 링크는 [이름](링크)
+## 링크는 []()
 Result : 
 [야통이](https://www.youtube.com/watch?v=Gvq4bawFRiU)
 
@@ -26,7 +26,7 @@ Result :
 삼색이는 귀여워요
 -->
 
-## 이미지는 ![이름](링크)
+## 이미지는 ![]()
 ![귀여운삼색이](https://d2u3dcdbebyaiu.cloudfront.net/uploads/atch_img/325/6c298973b5958cd712003b5377863dfe.jpeg)
 
 ## 중간 정렬?
