@@ -165,3 +165,17 @@ details[open] > summary ~ * {
 #myaccount {
     border-radius: 70%;
 }
+
+.fake_recommend_box {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.fake_recommend_box > img {
+    border-radius: 70%;
+    border: 1px solid darkgray;
+    object-fit: cover;
+    width: 20%;
+    padding: 2px;
+}
