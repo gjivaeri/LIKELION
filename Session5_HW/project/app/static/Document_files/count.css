@@ -1,0 +1,44 @@
+* {
+    margin:0; padding:0;
+}
+body {
+    background-color:rgb(180,165,154);
+}
+.box{
+    float: center;
+    width: 900px;
+    position: relative;
+}
+
+.outline {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    padding: 100px 40px 270px 55px;
+    background-color: white
+
+}
+
+img{
+    vertical-align: middle;
+}
+
+.fab.fa-telegram-plane {
+    color:rgb(65, 59, 52);
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    padding-right:100px;
+    margin-bottom: 8px;
+}
+
+#submit {
+    color:white;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 17px;
+    background-color: rgb(153, 141, 132);
+    padding: 2px 14px;
+    border: 0;
+}
