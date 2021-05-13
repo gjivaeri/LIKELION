@@ -1,0 +1,50 @@
+
+#editing {
+    display: flex;
+    width:100%;
+}
+
+#editing .edit{
+    margin:0;
+    text-align:center;
+    width:100%;
+    font-size:20px;
+    background-color: black;
+}
+
+h2 {
+    color: white;;
+    background-color: black; 
+
+}
+
+p {
+    font-size:20px;
+    color: black;
+}
+
+#commentbox .commentlist {
+    width:100%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    font-size:18px;
+    text-align: left;
+    margin-left: 60px;
+}
+
+#commentbox .submit {
+    color: black;
+}
+
+#commentbox .commentlist a{
+    color:black;
+    width:30px;
+    margin-left: 70%;
+    font-size:15px;
+}
+
+#commentbox .commentlist #commentdelete{
+    border: 1px solid black;
+    margin-bottom: 2px;
+}

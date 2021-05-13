@@ -1,0 +1,46 @@
+* {
+    margin:0; padding:0;
+}
+body {
+    background-color:rgb(180,165,154);
+}
+.box{
+    float: center;
+    width: 900px;
+    position: relative;
+}
+
+.outline {
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+}
+
+img{
+    vertical-align: middle;
+}
+
+
+#message {
+    display:flex;
+    color:rgb(65, 59, 52);
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+#submit {
+    color:white;
+    font-size: 17px;
+    background-color: rgb(153, 141, 132);
+    padding: 2px 14px;
+    border: 0;
+}
+
+#text {
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 15px;
+}

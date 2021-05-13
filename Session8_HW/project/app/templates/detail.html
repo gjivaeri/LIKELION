@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block css %} {% load static %}
+    <link href="{% static 'detail.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+{{post.title}} 
+{% endblock title %}
+
+{% block content %}
+    <div>
+        <h2>할 일</h2>
+        <p>{{ post.title }}</p>
+    </div>
+    <div>
+        <h2>세부 사항</h2>
+        <p>{{ post.content }}</p>
+    </div>
+    <div>
+        <p>작성일: {{ post.date_created }}</p>
+        <p>마감기한: {{ post.date_deadline }}</p>
+    </div>
+    <div id="commentbox">
+        <form method="POST">
+            {%csrf_token %}
+            <textarea cols=80 rows=3 name="content" placeholder="댓글을 입력해주세요"></textarea>
+            <button class="submit" type="submit">댓글쓰기</button>
+        </form>
+        <div class="commentlist">
+        {% for comment in post.comments.all %}
+            {{ comment.content }}
+            <a id="commentdelete" href="{% url 'delete_comment' post.pk comment.pk %}">삭제</a>
+        {% endfor %}
+        </div>
+    </div>
+    <div id="editing">
+        <a class="edit" href="{% url 'home' %}">홈으로</a>
+        <a class="edit" href="{% url 'edit' post.pk %}">수정하기</a>
+        <a class="edit" href="{% url 'delete' post.pk %}">삭제하기</a>
+    </div>
+{% endblock content %}

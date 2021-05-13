@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/65d30cea67.js" crossorigin="anonymous"></script>
+    {%load static%}
+    <link rel="stylesheet" type="text/css" href="{% static 'count.css' %}">
+</head>
+<body>
+    <div id="container">
+        <div class="box">
+            <img src={%static 'phone.png'%}>
+            <div class="outline">
+            <div id="message">
+            <p>메시지를 입력하세요</p>
+            <i class="fab fa-telegram"></i>
+            </div>
+            <form action="{% url 'result' %}" method="post">{% csrf_token %}
+                <textarea name="text" id="text" cols="40" rows="15"></textarea>
+                <br>
+                <input id="submit" type="submit" alt="submit" value="전송">
+            </form>
+            </div>
+        </div>
+</body>
+</html>

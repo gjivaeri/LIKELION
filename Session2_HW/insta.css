@@ -1,0 +1,181 @@
+body {
+    width: 35%;
+    height: 500px;
+}
+
+/* account box */
+.account_box {
+    display:flex;
+    height: 50px;
+    align-items: center;
+    position:sticky;
+    top:0;
+    background-color: white;
+}
+
+.account_box > img {
+    height: 35px;
+}
+
+#account { 
+    margin-left: 20px;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* main photo box */
+.mainphoto_box{
+    display:flex;
+    height:100px;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#main_photo { 
+    height:80px;
+    border-radius: 70%;
+    object-fit: cover;
+}
+
+#num {
+    font-weight: bold;
+}
+
+/* text box */
+.text_box {
+    margin-left: 10px;
+}
+
+#mascot {
+    color:lightslategrey;
+}
+/* 텍스트박스 > 더보기 애니메이션 
+https://marshall-ku.com/web/tips/js-%EC%97%86%EC%9D%B4-%EB%8D%94%EB%B3%B4%EA%B8%B0-%EC%A0%91%EA%B8%B0-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0
+참조.  a링크가 박스를 빠져나가서 만듬*/
+
+details > summary {
+    cursor: pointer;
+}
+
+details[open] > summary ~ * {
+    animation: reveal 0.5s;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -10px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* follow message box */
+.message_box > * {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.message_box > form > * {
+    border: 1px solid gray;
+    background-color: white;
+    border-radius: 6%;
+    width: 27%;
+    height: 33px;
+    margin: 3px;
+    padding-top: 4px;
+    text-align: center;
+}
+
+#follow {
+    background-color: dodgerblue;
+    color: white;
+    border: 2px solid dodgerblue
+}
+
+.message_box > form > button {
+    flex-basis: 10%;
+}
+
+#more {
+    height:25px;
+}
+
+/* photo outline box */
+.photo_box_outline {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#account_photo {
+    border-bottom: 1px solid black;
+    flex-basis: 50%;
+    padding-left: 20%;
+}
+
+.photo_box_outline > div > img {
+    margin-top: 20px;
+    height: 35px;
+}
+
+#tagged_photo {
+    border-bottom: 1px solid gray;
+    flex-basis: 50%;
+    padding-left: 20%;
+}
+
+/* photo box */
+.photo_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.photo_box > * {
+    width: 30%;
+}
+
+.photo_box > * > * {
+    width: 100%;
+}
+
+/* bottom box */
+.bottom_box {
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    background-color: white;
+    position:sticky;
+    bottom: 0;
+}
+
+.bottom_box > img {
+    height:30px; 
+    padding-top: 10px;
+}
+
+#myaccount {
+    border-radius: 70%;
+}
+
+.fake_recommend_box {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.fake_recommend_box > img {
+    border-radius: 70%;
+    border: 1px solid darkgray;
+    object-fit: cover;
+    width: 20%;
+    padding: 2px;
+}

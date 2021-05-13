@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">   
+    <link href="{% static 'base.css' %}" rel="stylesheet">
+    {% block css %}
+    
+    {% endblock css %}
+</head>
+
+<body>
+
+<nav id="topMenu" >
+    <ul>
+        <li><a class="menuLink" href="{% url 'home' %}">Home</a></li> 
+        <li><a class="menuLink" href="{% url 'new' %}">New Post</a></li> 
+        <li><a class="menuLink" href="{% url 'new' %}">Community</a></li> 
+        <li><a class="menuLink" href="{% url 'new' %}">Admin</a></li> 
+    </ul> 
+</nav>
+
+    <div class="title">
+        {% block title %}
+
+        {% endblock title %}
+    </div>
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+ </body>
+</html>

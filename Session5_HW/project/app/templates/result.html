@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'result.css' %}">
+</head>
+<body>
+    <div class="box">
+        <img src={%static 'phone.png'%}>
+        <div class="outline">
+            <div class="sentences">
+            <div>{{text}}</div>
+            <div>글자수 {{total_len}}</div>
+            <div>공백제외 {{except_blank}}</div>
+            <div>단어수 {{words}}</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

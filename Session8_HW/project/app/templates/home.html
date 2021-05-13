@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+<head>
+{% block css %} {% load static %}
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock %}
+</head>
+
+{% block title %}
+To Do List
+</div>
+{% endblock title %}
+
+{% block content %}
+        <ul>
+            {% for post in posts %}
+                <div class="todo"><input type="checkbox" name={{post.title}} value={{post.title}}>
+                    <a href="{% url 'detail' post.pk %}">{{ post.title }}</a>
+                    <br>
+                     마감기한 {{ post.date_deadline}}
+                     /<br>{{post.remaining_days}}일 남음
+                </div><br>  
+            {% endfor %}
+        </ul>
+    <br>
+    <a class="add" href="{% url 'new' %}">할 일 추가</a>
+{% endblock content %}

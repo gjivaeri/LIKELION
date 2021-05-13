@@ -1,0 +1,15 @@
+* {
+    text-align: center;
+    font-family: 'Do Hyeon', sans-serif;
+    background-color: rgb(243, 197, 111);
+    color: (rgb(39, 29, 29));
+  }
+  
+h1 {
+    font-family: 'Do Hyeon', sans-serif;
+    padding: 7px 20px 7px 20px;
+  }
+
+ul {
+    margin-right: 20px;
+}
