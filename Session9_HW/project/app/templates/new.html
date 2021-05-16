@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block css %} {% load static %}
+    <link rel="stylesheet" href="{% static 'new.css' %}">
+{% endblock %}
+
+{% block title %}
+New
+{% endblock title %}
+
+{% block content %}
+<div id="newbox">
+    <form action="" method="post">
+        {% csrf_token %}
+        <div id="todotitle">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" placeholder="할일을 입력해 주세요">
+        </div><br>
+        <div>
+            <label for="content"></label>
+            <textarea name="content" id="content" cols="30" rows="10" placeholder="내용을 입력해 주세요"></textarea>
+        </div>
+        <div>
+            <label for="date_created">Created_date</label>
+            <input type="date" name="date_created" id="date_created" value="2021-05-17" min="2021-05-17" max="2022-01-01">
+            <label for="date_deadline">End_date</label>
+            <input type="date" name="date_deadline" id="date_deadline" value="2021-05-17" min="2021-05-17" max="2022-01-01">
+        </div><br>
+        <button type="submit">작성하기</button>
+    </form>
+</div>
+{% endblock content %}
