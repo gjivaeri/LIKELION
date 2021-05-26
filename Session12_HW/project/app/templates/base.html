@@ -1,0 +1,65 @@
+{% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">   
+    <link href="{% static 'base.css' %}" rel="stylesheet">
+    {% block css %}
+    
+    {% endblock css %}
+</head>
+
+<body>
+
+<nav id="topMenu" >
+    <ul>
+        <li><a class="menuLink" href="{% url 'home' %}">Home</a></li> 
+        {% if user.is_authenticated %}
+        </li>
+        <li><a class="menuLink" href="{% url 'new' %}">New Post</a></li>
+        <li><a class="menuLink" href="{% url 'mypage' %}">My Page</a></li>
+        <li><a class="menuLink" href="{% url 'logout' %}">Log out</a></li>  
+        {% else %}
+        <li><a class="menuLink" href="{% url 'login' %}">Log in</a></li>
+        <li><a class="menuLink" href="{% provider_login_url 'kakao' %}">Log in with Kakao</a></li>
+        <li><a class="menuLink" href="{% url 'signup' %}">Sign up</a></li> 
+        {% endif %}
+    </ul> 
+</nav>
+    <div class="title">
+        {% block title %}
+
+        {% endblock title %}
+    </div>
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+    <script type="text/javascript">
+        let navlist = document.querySelector(".nav-bar");
+        let menu = document.querySelector(".menu");
+        navlist.classList.add("hidden");
+    
+        menu.addEventListener("mouseover", () => {
+          if (menu.textContent == "메뉴") {
+            navlist.classList.remove("hidden");
+            navlist.style.display = "none";
+            menu.textContent = "접기";
+          }
+          else {
+            navlist.classList.add("hidden");
+            menu.textContent = "메뉴";
+            navlist.style.display="block"
+          };
+        })
+      </script>
+ </body>
+</html>
