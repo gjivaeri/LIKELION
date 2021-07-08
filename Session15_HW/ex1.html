@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ex1.css">
+    <title>Awesome</title>
+</head>
+<body>
+    <div id="myDIV" class="header">
+      <!-- Trigger/Open The Modal -->
+        <button id="myBtn">Open AD</button>
+          <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+          <!-- Loader -->
+            <div id="loader"></div>
+            <div style="display:none;" id="myDiv" class="animate-bottom">
+              <img class="randomImg" src="http://source.unsplash.com/random/" alt="randomImg">
+            </div>
+            <!-- Macro -->
+            <form name="frm">
+              <input type="text" size=18 name="output" placeholder="Key">
+              <input type="button" value="Key" onClick="populateform(this.form.thelength.value)">
+              <input type="text" size=18 name="che" placeholder="Enter the Key">
+              <input type="button" value="Submit" onClick="check()">
+                <b>문자 길이:</b> <input type="text" name="thelength" size=3 value="5">
+            </form>
+          </div>
+   </div>
+        <h2>Awesome To Do List</h2>
+        <div class="inputBox">
+            <input type="text" id="myInput" placeholder="Title...">
+            <button onclick="newElement()" class="addBtn">Add</button>
+        </div>
+    </div>
+      
+    <ul id="myUL">
+        <li>
+            <span>Happy Coding :)</span>
+            <span class="close">&#215;</span>
+        </li>
+    </ul>
+</body>
+<script src="ex1.js"></script>
+</html>
