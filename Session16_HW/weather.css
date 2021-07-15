@@ -1,0 +1,12 @@
+* {
+text-align: center;
+}
+.weatherStyle{
+  margin-top: 20px;
+  border: 1px solid black;
+  display: flex;
+  overflow: auto;
+}
+.content{
+  border: 1px solid black;
+}
